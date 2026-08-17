@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <span class="brand-icon">◆</span>
+            <span class="brand-text">Portfolio</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#overview" class="nav-item active" data-section="overview">
+                <span class="nav-icon">📊</span> Overview
+            </a>
+            <a href="#projects" class="nav-item" data-section="projects">
+                <span class="nav-icon">📁</span> Projects
+            </a>
+            <a href="#experience" class="nav-item" data-section="experience">
+                <span class="nav-icon">💼</span> Experience
+            </a>
+            <a href="#skills" class="nav-item" data-section="skills">
+                <span class="nav-icon">⚡</span> Skills
+            </a>
+            <a href="#activity" class="nav-item" data-section="activity">
+                <span class="nav-icon">📈</span> Activity
+            </a>
+            <a href="#contact" class="nav-item" data-section="contact">
+                <span class="nav-icon">✉️</span> Contact
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button class="btn-download-cv" onclick="downloadCV()">📄 Download CV</button>
+        </div>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content">
+
+        <!-- ===== HEADER ===== -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>Andre Saputra</h1>
+                <span class="role-badge">Fullstack Developer</span>
+                <span class="status-badge available">● Available for opportunities</span>
+            </div>
+            <div class="header-right">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Email</a>
+            </div>
+        </header>
+
+        <!-- ===== SECTION: OVERVIEW ===== -->
+        <section id="overview" class="section active">
+            <div class="section-header">
+                <h2>Overview</h2>
+                <p>Welcome back — here's your professional snapshot</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-card">
+                    <span class="stat-icon">📂</span>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalProjects">12</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📦</span>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalRepos">35</span>
+                        <span class="stat-label">Repositories</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🧠</span>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalSkills">18</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">⏳</span>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalExp">3</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About + Quick Chart -->
+            <div class="overview-grid">
+                <div class="about-card">
+                    <h3>About</h3>
+                    <p>
+                        Fullstack developer with 3+ years of experience building scalable web applications.
+                        Passionate about clean code, system design, and open source. I work at the intersection
+                        of engineering and product thinking.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Tech Distribution</h3>
+                    <div class="tech-bars" id="techBars">
+                        <!-- Diisi oleh JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION: PROJECTS ===== -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Selected work that showcases my skills</p>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Diisi oleh JS -->
+            </div>
+        </section>
+
+        <!-- ===== SECTION: EXPERIENCE ===== -->
+        <section id="experience" class="section">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <p>Where I've worked and what I've built</p>
+            </div>
+            <div class="timeline" id="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Fullstack Developer — PT Tech Solutions</h3>
+                        <span class="timeline-date">2023 – Present</span>
+                        <p>Built internal dashboard with React + Node.js, improved API response time by 40%, led 3 junior developers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Frontend Engineer — Startup Kita</h3>
+                        <span class="timeline-date">2021 – 2023</span>
+                        <p>Developed product landing pages and e-commerce UI with Next.js & Tailwind. Increased conversion by 20%.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Freelance Web Developer</h3>
+                        <span class="timeline-date">2020 – 2021</span>
+                        <p>Built custom websites for 15+ clients using WordPress, Vue.js, and Laravel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION: SKILLS ===== -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2>Tech Stack</h2>
+                <p>Tools & technologies I work with</p>
+            </div>
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Diisi oleh JS -->
+            </div>
+        </section>
+
+        <!-- ===== SECTION: ACTIVITY ===== -->
+        <section id="activity" class="section">
+            <div class="section-header">
+                <h2>Activity & Analytics</h2>
+                <p>GitHub contributions & project insights</p>
+            </div>
+            <div class="activity-grid">
+                <div class="activity-chart">
+                    <h3>Contribution (last 6 months)</h3>
+                    <div class="contribution-bars" id="contributionBars">
+                        <!-- Diisi oleh JS -->
+                    </div>
+                </div>
+                <div class="activity-stats">
+                    <h3>Project Categories</h3>
+                    <div class="category-list" id="categoryList">
+                        <!-- Diisi oleh JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION: CONTACT ===== -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <p>Let's connect</p>
+            </div>
+            <div class="contact-grid">
+                <a href="#" class="contact-card">📧 andresaputra@dev.com</a>
+                <a href="#" class="contact-card">🐙 github.com/andresaputra</a>
+                <a href="#" class="contact-card">🔗 linkedin.com/in/andresaputra</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
